@@ -1,0 +1,13 @@
+.Buscador{
+
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.Buscador form input{
+    height: 2em;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}

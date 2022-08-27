@@ -1,0 +1,17 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+body{
+  background: #2C3333;
+  padding-top: 40px;
+}
+a{
+  color: #fff;
+}
+footer{
+  padding: 10px;
+}

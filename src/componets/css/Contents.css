@@ -1,0 +1,27 @@
+.ContentRes{
+   
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.LiIten{
+    background: #395B64;
+    width: 80%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.LiIten .box_liIten{
+    display: flex;
+}
+.LiIten .box_liIten img{
+    width: 40%;
+    margin: -5px;
+}
+.box_liIten .LiIten_box_info{
+    margin-left: 10px;
+}
+
+
