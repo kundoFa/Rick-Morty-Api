@@ -15,3 +15,6 @@ a{
 footer{
   padding: 10px;
 }
+div{
+  border:  solid 1px #fff;
+}

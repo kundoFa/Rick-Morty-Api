@@ -1,44 +1,44 @@
 import React, { useState, useContext, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 
 import { UserApi } from './context/UserApi'
+//! Componentes custom
 import Header from './componets/Header'
 import ContentRes from "./componets/contents/ContentRes";
 import Buscador from './componets/Buscador'
+//!
 function App() {
   const [data,setData]=useState([])
   const [dataInfo,setDataInfo] = useState([])
   const [bus,setBus] = useState("")
+  const [url,setUrl] = useState("https://rickandmortyapi.com/api/character/")
   const buscar = (e)=>{
     e.preventDefault();
     let valInp = e.target[0].value
-    console.log(e)
-    console.log(e.target[0].value)
-    setBus(valInp)
+    setUrl(`https://rickandmortyapi.com/api/character/?name=${valInp}`)
   }
-
+  const paginations = ()=>{
+    setUrl(dataInfo.next)
+  }
   useEffect(()=>{
-    fetch(`https://rickandmortyapi.com/api/character/?name=${bus}`)
+    fetch(url)
     .then(res=>res.json())
     .then(res=>{
       setDataInfo(res.info)
       setData(res.results)
     })
-  },[bus])
+    
+  },[bus,url])
   return (
     <React.Fragment>
-    <UserApi.Provider value={data}>
+    <UserApi.Provider value={[data,dataInfo]} >
       <div className='App'>
-
-      
         <Header/>
         <main>
           <Buscador funBuscar={buscar}/>
-          <ContentRes/>
-
+          <ContentRes funBut={paginations}/>
+          
         </main>
-
       </div>
     </UserApi.Provider>
     <footer>

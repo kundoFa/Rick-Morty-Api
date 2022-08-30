@@ -1,15 +1,16 @@
 import React,{useState, useEffect} from 'react';
 import useApi from '../../hooks/useApi';
 import LiIten from './LiIten';
+import ButosPages from './ButosPages';
 
 
 import "../css/Contents.css"
-function ContentRes() {
+function ContentRes({funBut}) {
 
 
 	return (
 		<div className='ContentRes'>
-			{useApi().map(e=>(
+			{useApi()[0].map(e=>(
 				<LiIten key={e.id}
 					pName={e.name}
 					srcImg={e.image}
@@ -19,7 +20,12 @@ function ContentRes() {
 			))}
 			
 
-
+			<div className='box_pages_butos'>
+				<ButosPages 
+					val={useApi()[1]}
+					fun={funBut}
+				/>
+			</div>
 		</div>
 	);
 }

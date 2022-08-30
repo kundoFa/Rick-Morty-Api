@@ -24,4 +24,17 @@
     margin-left: 10px;
 }
 
+.box_pages_butos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+.ButosPages button{
+    height: 30px;
+    min-width: 100px;
+    max-width: 160px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
 
+}
