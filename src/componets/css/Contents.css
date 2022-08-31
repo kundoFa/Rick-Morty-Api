@@ -22,8 +22,15 @@
 }
 .box_liIten .LiIten_box_info{
     margin-left: 10px;
+    width: 60%;
+    border: solid 1px #fff;
+    padding: 10px;
 }
-
+.LiIten_box_info p{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;    
+}
 .box_pages_butos{
     width: 100%;
     display: flex;

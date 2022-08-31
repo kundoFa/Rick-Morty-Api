@@ -6,8 +6,6 @@ import ButosPages from './ButosPages';
 
 import "../css/Contents.css"
 function ContentRes({funBut}) {
-
-
 	return (
 		<div className='ContentRes'>
 			{useApi()[0].map(e=>(
@@ -18,13 +16,8 @@ function ContentRes({funBut}) {
 					pStatus={e.status}
 				/>
 			))}
-			
-
 			<div className='box_pages_butos'>
-				<ButosPages 
-					val={useApi()[1]}
-					fun={funBut}
-				/>
+				<ButosPages/>
 			</div>
 		</div>
 	);

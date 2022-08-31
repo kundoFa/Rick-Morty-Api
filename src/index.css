@@ -10,11 +10,14 @@ body{
   padding-top: 40px;
 }
 a{
-  color: #fff;
+  color: rgb(80, 94, 155);
 }
 footer{
+  background: #191d1d;
+  font-family: 'Roboto', sans-serif;
+  
   padding: 10px;
+  color: #fff;
+  
 }
-div{
-  border:  solid 1px #fff;
-}
+
